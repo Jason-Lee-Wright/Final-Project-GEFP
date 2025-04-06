@@ -6,6 +6,8 @@ public class GameStateManager : MonoBehaviour
 {
     public GameManager gameManager;
 
+    public GameObject player;
+
     // Enum representing different game states
     public enum GameState
     {
@@ -65,6 +67,8 @@ public class GameStateManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
 
                 gameManager.UIManager.EnableMainMenu();
+
+                player.transform.position = new Vector3(-2.35f, 0, 0);
 
                 Time.timeScale = 0;
                 break;

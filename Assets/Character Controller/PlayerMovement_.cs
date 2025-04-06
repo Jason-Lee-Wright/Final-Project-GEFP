@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator AnimationP;
 
+    public bool CanMove = true;
+
     void Start()
     {
         // actually collectiong the Character controller attached to the player
@@ -50,6 +52,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // Update the current move direction when the event is triggered
         currentMoveDirection = InputVector;
+
+        if (!CanMove)
+        {
+            currentMoveDirection = Vector2.zero;
+        }
+
         AnimationCont();
     }
 
