@@ -14,7 +14,6 @@ public class PlayerInteract : MonoBehaviour
         if (other.GetComponent<InteractableObjects>())
         {
             currentInteractable = other.GetComponent<InteractableObjects>();
-            Debug.Log("Press E to interact");
         }
     }
 
