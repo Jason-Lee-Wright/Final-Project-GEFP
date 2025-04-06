@@ -61,8 +61,6 @@ public class GameStateManager : MonoBehaviour
         switch (state)
         {
             case GameState.MainMenu_State:
-                Debug.Log("Switched to MainMenu State");
-
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
 
@@ -72,8 +70,6 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case GameState.Gameplay_State:
-                Debug.Log("Switched to Gameplay State");
-
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
 
@@ -83,8 +79,6 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case GameState.Paused_State:
-                Debug.Log("Switched to Paused State");
-
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
 
@@ -94,8 +88,6 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case GameState.Options_State:
-                Debug.Log("Switched to Options State");
-
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
 

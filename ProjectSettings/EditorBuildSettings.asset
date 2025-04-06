@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Opening.unity
+    guid: 79b839a6c5c16eb40a1a871c2702d732
+  - enabled: 1
+    path: Assets/Scenes/First Quest.unity
+    guid: b7efcd8ff6dea7840a097f1d99c17adc
   m_configObjects: {}

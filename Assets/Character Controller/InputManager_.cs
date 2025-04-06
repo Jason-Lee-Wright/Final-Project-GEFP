@@ -27,10 +27,7 @@ public class InputManager : MonoBehaviour, GamePlay.IPlayerActions
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.started || context.canceled)
-        {
-            InputActions.InteractEvent.Invoke();
-        }
+        // A different Script has the interaction logic.
     }
 
     public void OnSprint(InputAction.CallbackContext context)
@@ -49,6 +46,4 @@ public static class InputActions
     public static Action<Vector2> MoveEvent;
 
     public static Action SprintEvent;
-
-    public static Action InteractEvent;
 }

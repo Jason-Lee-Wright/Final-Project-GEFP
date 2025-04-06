@@ -12,9 +12,9 @@ public class ButtonManager : MonoBehaviour
 
     public void PlayB()
     {
-        SceneManager.LoadScene("Left Scene");
+        SceneManager.LoadScene("Opening");
 
-        Player.transform.position = new Vector3(-7, 2, -4);
+        Player.transform.position = new Vector3(-13, 2, 0);
         
         gameManager.StateManager.ChangeState(GameState.Gameplay_State);
     }
