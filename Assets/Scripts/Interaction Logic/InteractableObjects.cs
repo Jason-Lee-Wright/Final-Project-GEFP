@@ -23,17 +23,23 @@ public class InteractableObjects : MonoBehaviour
 
     [Header("Info Area")]
     public string message; // Custom message shown when interacted with
-    public TextMeshProUGUI InfoText;
+    public TextMeshPro InfoText;
 
     [TextArea] public string[] Dialog;
 
     private void Awake()
     {
-        dialogManager = GetComponent<DialogManager>();
+        
     }
 
     private void Start()
     {
+        InfoText = GameObject.FindGameObjectWithTag("InfoText").GetComponent<TextMeshPro>();
+
+        PlayerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
+
+        dialogManager = GameObject.FindGameObjectWithTag("DioManager").GetComponent<DialogManager>();
+
         InfoText.text = string.Empty;
     }
 

@@ -8,6 +8,8 @@ public class GameStateManager : MonoBehaviour
 
     public GameObject player;
 
+    public PlayerMovement playerMovement;
+
     // Enum representing different game states
     public enum GameState
     {
@@ -27,6 +29,8 @@ public class GameStateManager : MonoBehaviour
     private void Start()
     {
         ChangeState(GameState.MainMenu_State);
+
+        playerMovement = player.GetComponent<PlayerMovement>();
     }
 
     public void ChangeState(GameState newState)
@@ -66,6 +70,8 @@ public class GameStateManager : MonoBehaviour
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
 
+                playerMovement.CanMove = false;
+
                 gameManager.UIManager.EnableMainMenu();
 
                 player.transform.position = new Vector3(-2.35f, 0, 0);
@@ -77,6 +83,8 @@ public class GameStateManager : MonoBehaviour
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
 
+                playerMovement.CanMove = true;
+
                 gameManager.UIManager.EnableGameplay();
 
                 Time.timeScale = 1;
@@ -85,6 +93,8 @@ public class GameStateManager : MonoBehaviour
             case GameState.Paused_State:
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
+
+                playerMovement.CanMove = false;
 
                 gameManager.UIManager.EnablePause();
 

@@ -63,6 +63,11 @@ public class PlayerMovement : MonoBehaviour
 
     void AnimationCont()
     {
+        if (!CanMove)
+        {
+            currentMoveDirection = Vector2.zero;
+        }
+
         if (currentMoveDirection == Vector2.zero)
         {
             AnimationP.SetBool("Walking", false);
@@ -77,7 +82,15 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleMovement()
     {
-        RigidBody.MovePosition(RigidBody.position + (currentMoveDirection * MoveSpeed * Time.fixedDeltaTime));
+        if (CanMove)
+        {
+            RigidBody.MovePosition(RigidBody.position + (currentMoveDirection * MoveSpeed * Time.fixedDeltaTime));
+        }
+
+        if (!CanMove)
+        {
+            AnimationCont();
+        }
     }
 
     void Sprinting()

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class DialogManager : MonoBehaviour
 {
@@ -20,6 +19,16 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         Dialog = new Queue<string>();
+
+        if (playerInteract == null)
+        {
+            GameObject playerObject = GameObject.FindWithTag("Player");
+            if (playerObject != null)
+            {
+                playerInteract = playerObject.GetComponent<PlayerInteract>();
+                playerMovement = playerObject.GetComponent<PlayerMovement>();
+            }
+        }
     }
 
     public void StartDialog(string[] sentances)
@@ -54,6 +63,9 @@ public class DialogManager : MonoBehaviour
         DialogBox.SetActive(false);
         DialogueText.text = string.Empty;
         DialoguePlaying = false;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -61,11 +73,26 @@ public class DialogManager : MonoBehaviour
     {
         if (DialoguePlaying)
         {
-            playerInteract.CanInteract = false;
+            PLayD();
         }
         else
         {
-            playerInteract.CanInteract = true;
+            EndD();
         }
+    }
+
+    void PLayD()
+    {
+        playerInteract.CanInteract = false;
+        playerMovement.CanMove = false;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    void EndD()
+    {
+        playerInteract.CanInteract = true;
+        playerMovement.CanMove = true;
     }
 }
