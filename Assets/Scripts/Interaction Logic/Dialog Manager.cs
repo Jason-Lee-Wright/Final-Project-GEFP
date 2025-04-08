@@ -14,6 +14,8 @@ public class DialogManager : MonoBehaviour
 
     public PlayerMovement playerMovement;
     public PlayerInteract playerInteract;
+    public GameStateManager gameStateManager;
+    public PlayerInventory playerInventory;
 
     // Start is called before the first frame update
     void Start()
@@ -75,7 +77,7 @@ public class DialogManager : MonoBehaviour
         {
             PLayD();
         }
-        else
+        else if (!DialoguePlaying && gameStateManager.currentState == GameStateManager.GameState.Gameplay_State)
         {
             EndD();
         }

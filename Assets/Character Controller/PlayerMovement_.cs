@@ -50,14 +50,12 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateMoveDirection(Vector2 InputVector)
     {
-        // Update the current move direction when the event is triggered
-        currentMoveDirection = InputVector;
-
         if (!CanMove)
         {
-            currentMoveDirection = Vector2.zero;
+            return;
         }
 
+        currentMoveDirection = InputVector;
         AnimationCont();
     }
 
@@ -65,7 +63,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!CanMove)
         {
-            currentMoveDirection = Vector2.zero;
+            currentMoveDirection = Vector2.zero; // Optional
+            AnimationP.SetBool("Walking", false);
+            return;
         }
 
         if (currentMoveDirection == Vector2.zero)
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             AnimationP.SetBool("Walking", true);
-            AnimationP.SetFloat("MovementX", currentMoveDirection.x); 
+            AnimationP.SetFloat("MovementX", currentMoveDirection.x);
             AnimationP.SetFloat("MovementY", currentMoveDirection.y);
         }
     }

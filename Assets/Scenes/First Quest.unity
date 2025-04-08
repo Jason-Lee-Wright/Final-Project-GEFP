@@ -19741,15 +19741,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: Dialog.Array.data[0]
-      value: hi
+      value: Oh Hello!
       objectReference: {fileID: 0}
     - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: Dialog.Array.data[1]
-      value: this works
+      value: Your that strange fello who wash up on the beach right?
       objectReference: {fileID: 0}
     - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: Dialog.Array.data[2]
-      value: end
+      value: 'AnYwAy!! Can you go get me 5 Coins? They should be above us! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: Dialog.Array.data[3]
+      value: Thanks!! I need 5 Gems now.....
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: Dialog.Array.data[4]
+      value: Well Go to the right, and get them!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: Dialog.Array.data[5]
+      value: Finally. Can you take this Thingy to the beach?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: Dialog.Array.data[6]
+      value: Finally. Can you take this Thingy to the beach?
       objectReference: {fileID: 0}
     - target: {fileID: 8110765848157755023, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_Name
