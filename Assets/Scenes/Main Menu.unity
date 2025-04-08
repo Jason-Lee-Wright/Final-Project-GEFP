@@ -450,6 +450,9 @@ MonoBehaviour:
   Inventory: {fileID: 45812044}
   GemCount: 0
   CoinCount: 0
+  SandCount: 0
+  FlowerCount: 0
+  SignCount: 0
 --- !u!114 &104275429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13249,7 +13252,7 @@ GameObject:
   - component: {fileID: 1578006863}
   m_Layer: 0
   m_Name: Questmanager
-  m_TagString: Untagged
+  m_TagString: QuestHandler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13283,10 +13286,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 2074509758}
   playerInventory: {fileID: 104275428}
-  Quest2: []
-  Quest3: []
-  Quest4: []
-  Quest5: []
+  Quest2:
+  - Now go get me some Gems
+  - They are off to the right.
+  Quest3:
+  - You done yet?
+  - I need sand now!
+  Quest4:
+  - What else can I get you to do?....
+  - Lats see
+  - Goooooo.... Pick the flower by the bush?
+  Quest5:
+  - Wow... Ok.. Ummmmm
+  - Do- Do you..
+  - Do you want to get me a blank sign?
+  OverD:
+  - Congrats!
+  - Now you may be wondering how I look just like you?
+  - wake up
+  - WAke up
+  - WAKE up
+  - WAKE UP
+  - GFVBH UP
+  - JYTFG CD
+  - MFDRTYUIJBVCDR
+  - KIUJYHTXCVUKITRGHJ
 --- !u!1 &1592228594
 GameObject:
   m_ObjectHideFlags: 0
@@ -14367,7 +14391,7 @@ MonoBehaviour:
   playerMovement: {fileID: 104275430}
   playerInteract: {fileID: 104275429}
   gameStateManager: {fileID: 1500842440}
-  playerInventory: {fileID: 0}
+  playerInventory: {fileID: 104275428}
 --- !u!4 &2074509759
 Transform:
   m_ObjectHideFlags: 0

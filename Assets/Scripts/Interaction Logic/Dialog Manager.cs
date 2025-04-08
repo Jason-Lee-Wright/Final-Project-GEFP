@@ -50,6 +50,9 @@ public class DialogManager : MonoBehaviour
 
     public void NextInQueue()
     {
+
+        NextQuest.QuestQueue.Invoke();
+
         if (Dialog.Count == 0)
         {
             EndDialogue();

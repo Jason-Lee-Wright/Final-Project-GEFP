@@ -758,29 +758,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8494727279854742799, guid: e974c119574effe4fbfd36369ca124f5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1171423799}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e974c119574effe4fbfd36369ca124f5, type: 3}
---- !u!1 &1171423798 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8494727279854742799, guid: e974c119574effe4fbfd36369ca124f5, type: 3}
-  m_PrefabInstance: {fileID: 1171423797}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1171423799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171423798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88c96951116d2f4c854ed2b8a079001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Shroud: {fileID: 0}
 --- !u!1 &1583172614
 GameObject:
   m_ObjectHideFlags: 0
@@ -9417,6 +9396,10 @@ PrefabInstance:
     - target: {fileID: 3707154675510621662, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: ItemID
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: interType

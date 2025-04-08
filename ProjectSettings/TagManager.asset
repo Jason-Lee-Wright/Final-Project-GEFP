@@ -8,6 +8,7 @@ TagManager:
   - InterObject
   - InfoText
   - DioManager
+  - QuestHandler
   layers:
   - Default
   - TransparentFX

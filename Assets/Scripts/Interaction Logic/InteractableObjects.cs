@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -7,7 +9,11 @@ public class InteractableObjects : MonoBehaviour
 {
     public PlayerInventory PlayerInventory;
 
+    public QuestHandler questHandler;
+
     private DialogManager dialogManager;
+
+    public string ItemID;
 
     public enum TypeInteract
     {
@@ -29,7 +35,7 @@ public class InteractableObjects : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
 
     private void Start()
@@ -40,7 +46,14 @@ public class InteractableObjects : MonoBehaviour
 
         dialogManager = GameObject.FindGameObjectWithTag("DioManager").GetComponent<DialogManager>();
 
+        questHandler = GameObject.FindGameObjectWithTag("QuestHandler").GetComponent<QuestHandler>();
+
         InfoText.text = string.Empty;
+
+        if (GameFlags.CollectedItems.Contains(ItemID))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void Interact()
@@ -71,6 +84,8 @@ public class InteractableObjects : MonoBehaviour
     {
         PlayerInventory.CollectItem(this.gameObject.name);
 
+        GameFlags.CollectedItems.Add(ItemID);
+
         this.gameObject.SetActive(false);
     }
 
@@ -86,7 +101,16 @@ public class InteractableObjects : MonoBehaviour
     {
         Debug.Log("Starting dialogue with: " + gameObject.name);
 
-        dialogManager.StartDialog(Dialog);
+        questHandler.QuestOrder();
+
+        if (!questHandler.Quest1Done)
+        {
+            dialogManager.StartDialog(Dialog);
+        }
+        else
+        {
+            dialogManager.StartDialog(questHandler.CurrentQuest);
+        }
     }
 
     private void ClearMessage()
@@ -95,4 +119,9 @@ public class InteractableObjects : MonoBehaviour
 
         InfoText.text = string.Empty;
     }
+}
+
+public static class GameFlags
+{
+    public static HashSet<string> CollectedItems = new HashSet<string>();
 }

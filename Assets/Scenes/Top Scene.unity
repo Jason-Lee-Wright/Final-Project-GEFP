@@ -10312,6 +10312,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: ItemID
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: interType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8110765848157755023, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -11023,6 +11031,14 @@ PrefabInstance:
     - target: {fileID: 3707154675510621662, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: ItemID
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: interType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8110765848157755023, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_Name
@@ -12468,6 +12484,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: ItemID
+      value: Coin2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: interType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8110765848157755023, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -12609,6 +12633,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: ItemID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: interType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8110765848157755023, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -12749,6 +12781,14 @@ PrefabInstance:
     - target: {fileID: 3707154675510621662, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: ItemID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
+      propertyPath: interType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8110765848157755023, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: m_Name
