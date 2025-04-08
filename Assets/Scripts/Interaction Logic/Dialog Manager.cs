@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -97,4 +98,9 @@ public class DialogManager : MonoBehaviour
         playerInteract.CanInteract = true;
         playerMovement.CanMove = true;
     }
+}
+
+public static class NextQuest
+{
+    public static Action QuestQueue;
 }

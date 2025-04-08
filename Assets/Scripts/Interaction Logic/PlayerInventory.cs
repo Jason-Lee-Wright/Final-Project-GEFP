@@ -8,7 +8,7 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI Inventory; // this will simulate an inventory for now.
 
     [SerializeField]
-    private int GemCount = 0, CoinCount = 0;
+    private int GemCount = 0, CoinCount = 0, SandCount = 0;
     private int LastGemCount, LastCoinCount;
 
     private void Start()
@@ -22,13 +22,16 @@ public class PlayerInventory : MonoBehaviour
         if (Item == "Gem")
         {
             GemCount++;
-            Debug.Log(GemCount);
             UpdateInventory();
         }
         if (Item == "Coin")
         {
             CoinCount++;
-            Debug.Log(CoinCount);
+            UpdateInventory();
+        }
+        if (Item == "Sand")
+        {
+            SandCount++;
             UpdateInventory();
         }
     }
@@ -45,6 +48,11 @@ public class PlayerInventory : MonoBehaviour
         if (CoinCount > 0)
         {
             Inventory.text += $"\nCoins: {CoinCount}";
+        }
+
+        if (SandCount > 0)
+        {
+            Inventory.text += $"\nSand: {SandCount}";
         }
     }
 
