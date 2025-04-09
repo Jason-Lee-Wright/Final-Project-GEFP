@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject MainMenu, PauseMenu, Gameplay, Options, Ending;
+    public GameObject MainMenu, PauseMenu, Gameplay, Options, Ending, Dialogue;
 
     private void Awake()
     {
@@ -55,5 +55,6 @@ public class UIManager : MonoBehaviour
         Gameplay.SetActive(false);
         Options.SetActive(false);
         Ending.SetActive(false);
+        Dialogue.SetActive(false);
     }
 }

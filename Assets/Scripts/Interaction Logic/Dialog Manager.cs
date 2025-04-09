@@ -19,6 +19,7 @@ public class DialogManager : MonoBehaviour
     public PlayerInteract playerInteract;
     public GameStateManager gameStateManager;
     public PlayerInventory playerInventory;
+    public UIManager uiManager;
 
     // Start is called before the first frame update
     void Start()
@@ -83,14 +84,15 @@ public class DialogManager : MonoBehaviour
         {
             PLayD();
         }
-        else if (!DialoguePlaying && gameStateManager.currentState == GameStateManager.GameState.Gameplay_State)
+        else if (!DialoguePlaying && (gameStateManager.currentState == GameStateManager.GameState.Gameplay_State || gameStateManager.currentState == GameStateManager.GameState.Ending_State))
         {
             EndD();
         }
 
         if (DialogueText.text == "KIUJYHTXCVUKITRGHJ")
         {
-            SceneManager.LoadScene("EndGame");
+            EndDialogue();
+            ActionEvents.TriggerScene.Invoke("No", "EndGame");
             gameStateManager.ChangeState(GameState.Ending_State);
         }
     }

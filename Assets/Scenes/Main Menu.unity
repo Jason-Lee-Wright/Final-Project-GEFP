@@ -12058,6 +12058,7 @@ MonoBehaviour:
   Gameplay: {fileID: 459418206}
   Options: {fileID: 264876705}
   Ending: {fileID: 561986845}
+  Dialogue: {fileID: 2054042573}
 --- !u!4 &784819674
 Transform:
   m_ObjectHideFlags: 0
@@ -14764,6 +14765,7 @@ MonoBehaviour:
   playerInteract: {fileID: 104275429}
   gameStateManager: {fileID: 1500842440}
   playerInventory: {fileID: 104275428}
+  uiManager: {fileID: 0}
 --- !u!4 &2074509759
 Transform:
   m_ObjectHideFlags: 0
