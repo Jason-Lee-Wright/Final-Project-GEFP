@@ -13,6 +13,8 @@ public class InteractableObjects : MonoBehaviour
 
     private DialogManager dialogManager;
 
+    private Coroutine messageRoutine;
+
     public string ItemID;
 
     public enum TypeInteract
@@ -91,10 +93,18 @@ public class InteractableObjects : MonoBehaviour
 
     public void Info()
     {
-        CancelInvoke();
-        InfoText.text = string.Empty;
+        if (messageRoutine != null)
+            StopCoroutine(messageRoutine);
+
         InfoText.text = message;
-        Invoke("ClearMessage", 5);
+        messageRoutine = StartCoroutine(ClearMessageCoroutine());
+    }
+
+    IEnumerator ClearMessageCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+        InfoText.text = string.Empty;
+        messageRoutine = null;
     }
 
     public void Dialogue()
@@ -113,7 +123,7 @@ public class InteractableObjects : MonoBehaviour
         }
     }
 
-    private void ClearMessage()
+    public void ClearMessage()
     {
         Debug.Log("Clearing message");
 

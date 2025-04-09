@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static GameStateManager;
 
 public class DialogManager : MonoBehaviour
 {
@@ -84,6 +86,12 @@ public class DialogManager : MonoBehaviour
         else if (!DialoguePlaying && gameStateManager.currentState == GameStateManager.GameState.Gameplay_State)
         {
             EndD();
+        }
+
+        if (DialogueText.text == "KIUJYHTXCVUKITRGHJ")
+        {
+            SceneManager.LoadScene("EndGame");
+            gameStateManager.ChangeState(GameState.Ending_State);
         }
     }
 

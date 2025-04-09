@@ -9732,7 +9732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: message
-      value: Some pleople can walk on water
+      value: Just Knock!
       objectReference: {fileID: 0}
     - target: {fileID: 7135448814332509855, guid: 367efbb3f1efbb24393e671afb28e634, type: 3}
       propertyPath: interType

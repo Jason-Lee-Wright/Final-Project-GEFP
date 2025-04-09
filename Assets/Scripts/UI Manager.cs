@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject MainMenu, PauseMenu, Gameplay, Options;
+    public GameObject MainMenu, PauseMenu, Gameplay, Options, Ending;
 
     private void Awake()
     {
@@ -41,11 +41,19 @@ public class UIManager : MonoBehaviour
         Options.SetActive(true);
     }
 
+    public void EnableEnding()
+    {
+        DissableAllUIPanels();
+
+        Ending.SetActive(true);
+    }
+
     public void DissableAllUIPanels()
     {
         MainMenu.SetActive(false);
         PauseMenu.SetActive(false);
         Gameplay.SetActive(false);
         Options.SetActive(false);
+        Ending.SetActive(false);
     }
 }

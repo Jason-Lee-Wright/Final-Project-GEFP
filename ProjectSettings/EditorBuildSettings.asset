@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Top Scene.unity
     guid: b50ad547e137e0940a94b6e8baab611a
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: fac1581e4f199504caab8ad92a392fea
+  - enabled: 1
+    path: Assets/Scenes/Secret.unity
+    guid: a053b0b511a8e6c4b9a3579e0e4870e0
+  - enabled: 1
+    path: Assets/Scenes/Secret End.unity
+    guid: 3e654c0985bd3f94da7fc2c63c871fb1
   m_configObjects: {}

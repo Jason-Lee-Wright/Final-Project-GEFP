@@ -17,7 +17,8 @@ public class GameStateManager : MonoBehaviour
         MainMenu_State,
         Gameplay_State,
         Paused_State,
-        Options_State
+        Options_State,
+        Ending_State
     }
 
     public GameState currentState { get; private set; }
@@ -110,6 +111,15 @@ public class GameStateManager : MonoBehaviour
                 gameManager.UIManager.EnableOptions();
 
                 Time.timeScale = 0;
+                break;
+
+            case GameState.Ending_State:
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+
+                gameManager.UIManager.EnableEnding();
+
+                Time.timeScale = 1;
                 break;
         }
     }
